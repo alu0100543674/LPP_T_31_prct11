@@ -148,4 +148,53 @@ module QuestionExamen
 	       it " #Debe existir un Nodo de la lista con sus datos, su siguiente y su anterior" do
 	         expect(@lista.cabeza != nil && @lista.next == nil && @lista.anterior == nil) 
 	       end
+
+
+it " #Se deben insertar nodos en la lista" do
+                    @lista.push(@node1)
+                    expect(@lista.cabeza).to eq(@node1)
+                end
+                
+                it " #Se insertan varios elementos por el principio" do
+                    @lista.push(@node1)
+                    @lista.push(@node2)
+                    expect(@lista.cabeza).to eq(@node2)
+                end
+		
+		it " #Se insertan varios elementos por el final" do
+                    @lista.push_final(@node1)
+                    @lista.push_final(@node2)
+                    expect(@lista.cabeza).to eq(@node1)
+                end
+
+	        it " #Se extrae el primer elemento de la lista" do
+		    @lista.push(@node1)
+                    @lista.push(@node2)
+                    @lista.pop
+                    expect(@lista.cabeza).to eq(@node1)	
+	        end
+		
+		it " #Se extrae el ultimo elemento de la lista" do
+		    @lista.push_final(@node1)
+                    @lista.push_final(@node2)
+                    @lista.pop_final
+                    expect(@lista.cabeza).to eq(@node1)	
+	        end
+		
+		it " #Se inserta por el final de la lista" do
+		    @lista.push_final(@node1)
+                    @lista.push_final(@node2)
+                    expect(@lista.cabeza).to eq(@node1)	
+	        end
+	  	it " #Comprobamos que se puede hacer un each" do
+	  		@lista.each{|i| yield i}
+		end
+	  end
+	  
+    end
+    
+
+
+end
+ 
     
