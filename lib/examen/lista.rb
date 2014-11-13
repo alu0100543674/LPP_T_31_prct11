@@ -19,6 +19,10 @@ module QuestionExamen
     		def <=> (other)
         		nivel <=> other.nivel
     		end
+    		
+    		def == (other)
+				@question == other.question
+			end
 	end 
 	
 	
@@ -98,10 +102,10 @@ module QuestionExamen
      		
         # Metodo each
      	def each 
-     		aux = @tail
-     		while aux != nil
-     			yield aux.value
-     			aux = aux.next
+     		nodo = @head
+     		while (nodo != @tail) do
+     			yield nodo.value
+     			nodo = nodo.next
      		end
      	end
 end

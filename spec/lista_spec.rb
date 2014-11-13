@@ -206,6 +206,16 @@ end
 	  		it " #Comprobamos que se puede hacer un each" do
 	  			@lista.each{|i| yield i}
 			end
+		
+			it "probando all" do
+      			cadena=""
+    			 @lista.all? {|i| cadena += i.to_s}
+      		end
+      
+       		it "probando none" do
+      			cadena=""
+      			@lista.none? {|i| cadena += i.to_s}
+    		end
 	  end
 	  
     end
