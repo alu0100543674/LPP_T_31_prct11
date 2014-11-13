@@ -22,7 +22,7 @@ module QuestionExamen
     
  
 
- # Expectativas para la clase seleccion simple
+ # Expectativas  para la clase seleccion simple
     describe QuestionExamen::SeleccionSimple do	  
 	  before :each do
 	     @p1 = QuestionExamen::SeleccionSimple.new('¿Cual es el tipo del objeto en el siguiente codigo Ruby? class Objeto \n end', "c) Un Objeto \n", ["a) Una instancia de la clase Class \n ", "b) Una constante \n", "d) Ninguna de las anteriores \n"], 4)
