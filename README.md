@@ -3,8 +3,8 @@ PRACTICA 08
 Grupo: LPP_T_31
 
 Equipo:
-	- Carla Hernández Díaz
-	- Samer Al Khindi
+	- Carla Hernández Díaz (codigo lista.rb)
+	- Samer Al Khindi (lista_spec.rb)
 
 Descripción:
 
