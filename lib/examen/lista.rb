@@ -17,11 +17,11 @@ module QuestionExamen
       		end
     
     		def <=> (other)
-        		nivel <=> other.nivel
+        		@nivel <=> other.nivel
     		end
     		
     		def == (other)
-				@question == other.question
+				@nivel == other.nivel && @question == other.question
 			end
 	end 
 	

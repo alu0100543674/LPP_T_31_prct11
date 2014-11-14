@@ -1,3 +1,4 @@
+# encoding: UTF8
 require 'spec_helper'
 require "./lib/examen/lista.rb"
 
@@ -214,13 +215,17 @@ end
 		
 			it "probando all" do
       			cadena=""
-    			 @lista.all? {|i| cadena += i.to_s}
+    			 @lista.all?.should eq(true) 
+    			 # {|i| cadena += i.to_s}
+    			 @lista.count.should eq(4)
       		end
       
        		it "probando none" do
       			cadena=""
       			@lista.none? {|i| cadena += i.to_s}
     		end
+    		
+    		
 	  end
 	  
     end
