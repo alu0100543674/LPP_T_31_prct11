@@ -8,6 +8,7 @@ module QuestionExamen
     describe QuestionExamen::Pregunta do	  
 	  before :each do
 	    @pregunta1 = QuestionExamen::Pregunta.new('3 + 7 =', 0)
+	    @pregunta2 = QuestionExamen::Pregunta.new('3 + 8 =', 0)
 	  end	  
 	    
 	  context " #Clase Preguntas" do
@@ -17,6 +18,10 @@ module QuestionExamen
 	    
 	    it " #Debe tener un campo para el nivel de dificultad" do
 	      expect(@pregunta1.nivel) == 0
+	    end
+	    
+	    it " #Comprobamos si las dos preguntas son iguales" do
+	    	(@pregunta1 == @pregunta2).should eq(false);	
 	    end
 	  end	    
     end
