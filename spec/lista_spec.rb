@@ -1,4 +1,3 @@
-# encoding: UTF8
 require 'spec_helper'
 require "./lib/examen/lista.rb"
 
@@ -217,15 +216,15 @@ end
       			cadena=""
     			 @lista.all?.should eq(true) 
     			 # {|i| cadena += i.to_s}
-    			 @lista.count.should eq(4)
-      		end
+    		end
       
-       		it "probando none" do
-      			cadena=""
-      			@lista.none? {|i| cadena += i.to_s}
+      		it " #Maximo" do
+    			expect(@lista.max).to eq(@node5)
     		end
     		
-    		
+    		it " #Minimo" do
+    			expect(@lista.min).to eq(@node2)
+    		end
 	  end
 	  
     end
