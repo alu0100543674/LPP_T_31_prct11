@@ -185,18 +185,7 @@ end
         	respuesta
 		end
 	
-		def hacer_examen
-	    	score = 0
-        	@preguntas.each do |preg|
-            	puts preg.to_s
-            	resp = gets.chomp
-            	this = preg.resp_correcta?(resp)
-            	if (this == true)
-                	score += 1 
-            	end
-        	end
-        	puts "Puntuacion: " + score
-		end	
+		
   	end
   	
 end
