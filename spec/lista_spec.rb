@@ -225,6 +225,8 @@ end
     		it " #Minimo" do
     			expect(@lista.min).to eq(@node2)
     		end
+    		
+    	
 	  end
 	  
     end
