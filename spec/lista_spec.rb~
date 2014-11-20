@@ -28,7 +28,7 @@ module QuestionExamen
     
  
 
- # Expectativas  para la clase seleccion simple
+ # Expectativas para la clase seleccion simple
     describe QuestionExamen::SeleccionSimple do	  
 	  before :each do
 	     @p1 = QuestionExamen::SeleccionSimple.new('¿Cual es el tipo del objeto en el siguiente codigo Ruby? class Objeto \n end', "c) Un Objeto \n", ["a) Una instancia de la clase Class \n ", "b) Una constante \n", "d) Ninguna de las anteriores \n"], 4)
@@ -227,6 +227,34 @@ end
     		end
     		
     	
+	  end
+	  
+	  describe QuestionExamen::Examen do
+	  	before :each do
+	  		@examen = QuestionExamen::List.new()
+	  		@pr1 = QuestionExamen::VerdaderoFalso.new("Es apropiado que una clase Tablero herede de una clase Juego \n", "Verdadero \n",
+ 				 	"Falso \n", 8)
+	      	@n1 = Node.new(@pr1,nil)	
+	    	@pr2 = QuestionExamen::VerdaderoFalso.new('La siguiente definicion de un hash en Ruby es valida: \n hash_raro = { \n [1, 2, 3] => Object.new(), \n Hash.new => :toto \n }', "b) Falso \n", ["a) Verdadero \n"], 9)
+	    	@n2 = Node.new(@pr2,nil)
+	      	@pr3 = QuestionExamen::SeleccionSimple.new('¿Cual es el tipo del objeto en el siguiente codigo Ruby? class Objeto \n end', "c) Un Objeto \n", ["a) Una instancia de la clase Class \n ", "b) Una constante \n", "d) Ninguna de las anteriores \n"], 4)
+	     	@n3 = Node.new(@p1,nil)	    
+	     	@pr4 = QuestionExamen::SeleccionSimple.new('¿Cual es la salida del siguiente codigo en Ruby? class Xyz \n def pots \n @nice \n end \n end', "b) nil \n", ["a) #<Xyz:0xa000208> \n ", "c) 0 \n", "d) Ninguna de las anteriores \n"], 2)
+	    	@n4 = Node.new(@p4, nil)
+	    	
+	    	@e = QuestionExamen::Examen.new(@examen)
+	    	
+	    	
+	    end
+	    
+	    it " #Debe ser de la clase Examen" do
+	    	expect(@e).instance_of?(Examen)
+	    end
+	    
+
+	    
+	 
+	      
 	  end
 	  
     end
