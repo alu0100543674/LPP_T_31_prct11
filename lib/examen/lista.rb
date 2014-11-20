@@ -109,6 +109,11 @@ module QuestionExamen
      		end
      	end
      
+     	def add_many(values)
+     		values.each do |x|
+     			add(x)
+     		end
+     	end
      	
 end
   
@@ -162,30 +167,60 @@ end
     
   	end 
   	
-  	class Examen
-  		attr_reader :nota
-		def initialize (lista)
-    		lista.orden
-			@preguntas = lista
-        	@nota = 0
-			#inicializamos un array con 0 elementos para las respuestas
+	class Examen
+		attr_accessor :preguntas
+		def initialize(listaPreguntas)
+			@npreguntas = listaPreguntas
 		end
-
-
-		def to_s
-        	aux = @preguntas.cabeza
-        	respuesta = ""
-        	respuesta += aux.value.to_s
-        	respuesta += "\n"
-        	while (aux != @preguntas.tail) do
-            	aux = aux.next
-            	respuesta += aux.value.to_s
-        		respuesta += "\n"
-        	end
-        	respuesta
-		end
-	
 		
-  	end
-  	
+		def insertQuestion(question)
+			nodo = Nodo.new(question)
+			nodoInsertado = @preguntas.push(nodo)
+			nodoInsertado.value
+		end
+		
+		def to_s
+			aux = @preguntas.cabeza
+			respuesta = ""
+			respuesta += aux.value.to_s
+			respuesta += "\n"
+			while (aux != @preguntas.tail) do
+				aux = aux.next
+				respuesta += aux.value.to_s
+				respuesta += "\n"
+			end
+			respuesta
+		end
+	end
+ 		
+	class Interface
+		attr_reader :examen
+		def initialize(examen)
+			@examen = examen
+		end
+		
+		def compresp(resp)
+			ok = 0
+			index = 0
+			num = 0
+			while n < 5 do
+				if @examen[i] == resp[i]
+					ok += 1
+				end
+				index += 1
+				num += 1
+			end
+			
+			if ok < (index/2)+1
+				p = "Suspendido: #{ok}/#{i}"
+			else
+				if ok == index
+					p = "Nota: 10"
+				else
+					p = "Aprobado: #{correctas}/#{i}"
+				end
+			end
+			p
+		end
+	end
 end
