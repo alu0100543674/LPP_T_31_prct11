@@ -294,12 +294,22 @@
 	        	it " #Debe ser de la clase Examen" do
 		    		expect(@examen1.class).to eq(Examen)
 	        	end
-		end
-	end
+		
+	
 
 
 			it " #Debe poderse mostrar una  lista de preguntas" do
 		    		expect(@examen1).to respond_to :to_s
 	        	end
+
+
+			it " #Debe tener una lista de preguntas" do
+		    		expect(@examen1.lista.class).to eq(ListaEnlazada)
+	        	end
+
+
+
+		end
+	end
 
 end
