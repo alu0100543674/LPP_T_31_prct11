@@ -180,6 +180,14 @@ module Test
             end
         end
         
+        def invertir(lista)
+	        @linvertida = Test::ListaEnlazada.new()
+	        lista.reverse_each do |q|
+	            @linvertida.push(q)
+	        end
+	        return @linvertida
+        end
+        
         
     end
     
