@@ -253,4 +253,47 @@
 				end
 	    	end
 	    end
+
+		describe Test::Examen do	  
+		  	before :each do  
+		      	@p1 = Test::Simple.new("Cual es el tipo del objeto en el siguiente codigo Ruby? class Objeto \n end", "Un Objeto", ["Una instancia de la clase Class \n ", "Una constante \n", "Ninguna de las anteriores \n"])
+		        @p2 = Test::TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego\n", "Verdadero", ["Falso \n"])
+		        @p3 = Test::TrueFalse.new("Salida class de hash_raro = {[1, 2, 3] => Object.new(),Hash.new => :toto}\n", "Verdadero", ["Falso \n"])
+		        @p4 = Test::Simple.new("class Array \n\tdef say_hi \n\t\tHEY!\n\tend\nend\np[1,, bob].say_hi \n", "Ninguna de las anteriores", ["1\n", "bob\n", "HEY!\n"])
+		        @p5 = Test::Simple.new("Salida de:\n\tclass Xyz \n\t\tdef pots \n\t\t\t@nice \n\t\tend \n\tend\n","nil", ["#<Xyz:0x00000002bf0ed0> \n","0 \n ", "Ninguna de las anteriores \n" ])
+		      
+		      	@lista = Test::ListaEnlazada.new()
+		      
+		      	@nodo1 = Test::Node.new(@p1,nil, nil)
+		      	@nodo2 = Test::Node.new(@p2,nil,nil)
+		      	@nodo3 = Test::Node.new(@p3,nil,nil)
+		      	@nodo4 = Test::Node.new(@p4,nil,nil)
+		      	@nodo5 = Test::Node.new(@p5,nil,nil)
+	
+		      	@lista.push(@nodo1)
+		      	@lista.push(@nodo2)
+		      	@lista.push(@nodo3)
+	      		@lista.push(@nodo4)
+	    	 	@lista.push(@nodo5)
+	     
+	      		@examen1 = Test::Examen.new(@lista)  
+	      
+	      		@ok1 = "nil"
+	      		@ok2 = "Ninguna de las anteriores"
+	      		@ok3 = "Verdadero"
+	      		@ok4 = "Verdadero"
+	      		@ok5 = "Un Objeto"
+
+	     		respuestas_correctas = [@ok1,@ok2,@ok3,@ok4,@ok5]
+
+	      		@interfaz1 = Test::Interfaz.new(respuestas_correctas) 
+	  		end	  
+	  
+	  		context " #Expectativas para Examen y Interfaz" do
+	  			# Expectativas para @examen1
+	        	it " #Debe ser de la clase Examen" do
+		    		expect(@examen1.class).to eq(Examen)
+	        	end
+		end
+	end
 end
