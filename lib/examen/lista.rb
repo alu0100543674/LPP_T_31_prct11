@@ -161,5 +161,18 @@ module Test
 	            return false
 	        end 
         end
-    end 
+    end
+    
+     # Clase Examen
+    class Examen
+    
+        include Enumerable
+ 
+        attr_accessor :lista
+      
+        def initialize(lista)
+	        @lista = lista
+        end
+    end
+    
 end
