@@ -1,4 +1,4 @@
-PRACTICA 09
+PRACTICA 10
 
 Grupo: LPP_T_31
 
@@ -8,10 +8,13 @@ Equipo:
 
 Descripción:
 
-	1. Considere la jerarquia de clases Ruby para representar preguntas de Seleccion Simple y de Verdadero y Falso asi como
-	la clase para representar y gestionar Listas Enlazadas de practicas anteriores.
-	2. Diseñe e implemente una clase Ruby para representar un examen mediante una Interfaz de Usuario. 
+	1. Diseñar e implementar un metodo, siguiendo la filosofia de la programacion funcional, que permita invertir el orden de las preguntas de un examen.
+	2. Documentar la gema utilizando una herramienta de generacion automatica de documentacion (RDOC o YARD).
 	3. Repartir las tareas entre los miembros del Equipo de Trabajo.
-	4. Comprobar con la herramienta Coverall la historia del cubrimiento y las estadisticas del codigo Ruby desarrollado.
-	5. Escribir la direccion http del repositorio que se ha creado en Github en la tarea habilitada en el Campus Virtual.
+
+Jerarquia de Clases:
+	1. Representar preguntas de Seleccion Simple y Verdadero y Falso.
+	2. Representar y gestionar Listas Enlazadas.
+	3. Representar un Examen.
+	4. Representar una Interfaz de Usuario.
 
