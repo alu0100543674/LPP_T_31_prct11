@@ -173,6 +173,27 @@ module Test
 	        @cont_ok = 0
 	        @cont_nok = 0
         end
+        
+        def realizarTest(resp)
+	        c = 0
+	        nPreg = 0
+	        while nPreg <  5
+	            if (@respuestaArray[c] == resp[c])
+		            @cont_ok = @cont_ok + 1
+	            else
+		            @cont_nok = @cont_nok + 1
+	            end
+	            c = c + 1
+	            nPreg += 1
+            end
+
+	        if (@cont_ok > @cont_nok)
+	            return true
+	        else
+	            return false
+	        end       
+        end
+        
     end
     
     # Clase Examen
