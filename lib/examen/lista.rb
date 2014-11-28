@@ -173,6 +173,14 @@ module Test
         def initialize(lista)
 	        @lista = lista
         end
+        
+        def to_s
+            @lista.each do |q|
+                puts "#{q.to_s}\n"     
+            end
+        end
+        
+        
     end
     
 end
