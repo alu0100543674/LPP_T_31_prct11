@@ -163,7 +163,19 @@ module Test
         end
     end
     
-     # Clase Examen
+    # Clase Interfaz
+    class Interfaz
+      
+        attr_accessor :cont_ok , :cont_nok, :respuestaArray
+    
+        def initialize(respuestaArray)
+	        @respuestaArray = respuestaArray
+	        @cont_ok = 0
+	        @cont_nok = 0
+        end
+    end
+    
+    # Clase Examen
     class Examen
     
         include Enumerable
