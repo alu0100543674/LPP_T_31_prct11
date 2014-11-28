@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>lista_spec.rb~ - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../Guardfile.html">Guardfile</a>
+  
+    <li><a href="../LICENSE_txt.html">LICENSE</a>
+  
+    <li><a href="../README_md.html">README</a>
+  
+    <li><a href="../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../doc/Examen_html.html">Examen.html</a>
+  
+    <li><a href="../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li><a href="../doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
+  
+    <li><a href="../doc/Guardfile_html.html">Guardfile.html</a>
+  
+    <li><a href="../doc/LICENSE_txt_html.html">LICENSE_txt.html</a>
+  
+    <li><a href="../doc/README_md_html.html">README_md.html</a>
+  
+    <li><a href="../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li><a href="../doc/Test_html.html">Test.html</a>
+  
+    <li><a href="../doc/Test/Examen_html.html">Examen.html</a>
+  
+    <li><a href="../doc/Test/Interfaz_html.html">Interfaz.html</a>
+  
+    <li><a href="../doc/Test/ListaEnlazada_html.html">ListaEnlazada.html</a>
+  
+    <li><a href="../doc/Test/Pregunta_html.html">Pregunta.html</a>
+  
+    <li><a href="../doc/Test/Simple_html.html">Simple.html</a>
+  
+    <li><a href="../doc/Test/TrueFalse_html.html">TrueFalse.html</a>
+  
+    <li><a href="../doc/examen_gemspec_html.html">examen_gemspec.html</a>
+  
+    <li><a href="../doc/fonts_css.html">fonts.css</a>
+  
+    <li><a href="../doc/index_html.html">index.html</a>
+  
+    <li><a href="../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li><a href="../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li><a href="../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li><a href="../doc/js/search_js.html">search.js</a>
+  
+    <li><a href="../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li><a href="../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li><a href="../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li><a href="../doc/spec/lista_spec_rb~_html.html">lista_spec_rb~.html</a>
+  
+    <li><a href="../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li><a href="../examen_gemspec.html">examen.gemspec</a>
+  
+    <li><a href="../spec/lista_spec_rb~.html">lista_spec.rb~</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page spec/lista_spec.rb~">
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;spec_helper&#39;</span>
+<span class="ruby-identifier">require</span> <span class="ruby-string">&quot;./lib/examen/lista.rb&quot;</span>
+
+<span class="ruby-keyword">module</span> <span class="ruby-constant">Test</span>
+        <span class="ruby-identifier">describe</span> <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Pregunta</span> <span class="ruby-keyword">do</span>        
+                <span class="ruby-identifier">before</span> :<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-ivar">@q</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Pregunta</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;3 + 7 =&#39;</span>)
+                        <span class="ruby-ivar">@q1</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Pregunta</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;3 + 8 =&#39;</span>)
+                <span class="ruby-keyword">end</span>       
+
+                <span class="ruby-identifier">context</span> <span class="ruby-node">&quot; #Expectativas para la clase Preguntas&quot;</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un campo para la pregunta q&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@q</span>.<span class="ruby-identifier">quest</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;3 + 7 =&#39;</span>
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un campo para la pregunta q1&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@q1</span>.<span class="ruby-identifier">quest</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;3 + 8 =&#39;</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>         
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">describe</span> <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Simple</span> <span class="ruby-keyword">do</span>      
+                <span class="ruby-identifier">before</span> :<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-ivar">@p1</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Simple</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Cual es el tipo del objeto en el siguiente codigo Ruby? class Objeto \n end&quot;</span>, <span class="ruby-string">&quot;c) Un Objeto \n&quot;</span>, [<span class="ruby-string">&quot;a) Una instancia de la clase Class \n &quot;</span>, <span class="ruby-string">&quot;b) Una constante \n&quot;</span>, <span class="ruby-string">&quot;d) Ninguna de las anteriores \n&quot;</span>])
+                <span class="ruby-ivar">@node1</span> = <span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@p1</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>)  
+                <span class="ruby-ivar">@p2</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Simple</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;class Array \n def say_hi \n HEY! end end \n p[1,, bob].say_hi \n&quot;</span>, <span class="ruby-string">&quot;a) Ninguna de las anteriores&quot;</span>, [<span class="ruby-string">&quot;b) 1 \n&quot;</span>, <span class="ruby-string">&quot;c) bob \n&quot;</span>, <span class="ruby-string">&quot;d) HEY! \n&quot;</span>, <span class="ruby-string">&quot;e) otramas \n&quot;</span>])
+                <span class="ruby-ivar">@node2</span> = <span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@p2</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>)
+                <span class="ruby-ivar">@p3</span>=<span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Simple</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Salida class Xyz \n def pots\n @nice\n end\nend\n&quot;</span>,<span class="ruby-string">&quot;a) nil&quot;</span>, [<span class="ruby-node">&quot;b) #&lt;Xyz:0x00000002bf0ed0&gt; \n&quot;</span>,<span class="ruby-string">&quot;c) 0 \n &quot;</span>, <span class="ruby-string">&quot;d) ninguna de las anteriores \n&quot;</span> ])
+                        <span class="ruby-ivar">@node3</span> = <span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@p3</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>)
+                <span class="ruby-keyword">end</span>     
+
+                <span class="ruby-identifier">context</span> <span class="ruby-node">&quot; #Expectativas para la clase Seleccion&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-comment"># Expectativas para p1</span>
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe ser de la Clase Simple&quot;</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p1</span>.<span class="ruby-identifier">class</span>) <span class="ruby-operator">==</span>  <span class="ruby-constant">Simple</span>       
+                <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un campo quest heredado de Pregunta&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p1</span>.<span class="ruby-identifier">quest</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Cual es el tipo del objeto en el siguiente codigo Ruby? class Objeto \n end&#39;</span>              
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un campo con la respuesta correcta&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p1</span>.<span class="ruby-identifier">right</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;c) Un Objeto \n&#39;</span>          
+                <span class="ruby-keyword">end</span>     
+
+            <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener opciones incorrectas&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p1</span>.<span class="ruby-identifier">distractor</span>) <span class="ruby-operator">==</span> [<span class="ruby-string">&quot;a) Una instancia de la clase Class \n &quot;</span>, <span class="ruby-string">&quot;b) Una constante \n&quot;</span>, <span class="ruby-string">&quot;d) Ninguna de las anteriores \n&quot;</span>]          
+                <span class="ruby-keyword">end</span>     
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un metodo to_s&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p1</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">respond_to</span> :<span class="ruby-identifier">to_s</span>       
+                <span class="ruby-keyword">end</span>     
+
+                <span class="ruby-comment"># Expectativas para p2</span>
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe ser de la Clase Simple&quot;</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p2</span>.<span class="ruby-identifier">class</span>) <span class="ruby-operator">==</span>  <span class="ruby-constant">Simple</span>       
+                <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un campo quest heredado de Pregunta&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p2</span>.<span class="ruby-identifier">quest</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;class Array \n def say_hi \n HEY! end end \n p[1,, bob].say_hi \n&#39;</span>        
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un campo con la respuesta correcta&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p2</span>.<span class="ruby-identifier">right</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;a) Ninguna de las anteriores&#39;</span>             
+                <span class="ruby-keyword">end</span>     
+
+            <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener opciones incorrectas&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p2</span>.<span class="ruby-identifier">distractor</span>) <span class="ruby-operator">==</span> [<span class="ruby-string">&quot;b) 1 \n&quot;</span>, <span class="ruby-string">&quot;c) bob \n&quot;</span>, <span class="ruby-string">&quot;d) HEY! \n&quot;</span>, <span class="ruby-string">&quot;e) otramas \n&quot;</span>]               
+                <span class="ruby-keyword">end</span>     
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un metodo to_s&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p2</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">respond_to</span> :<span class="ruby-identifier">to_s</span>       
+                <span class="ruby-keyword">end</span>     
+
+                <span class="ruby-comment"># Expectativas para p3</span>
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe ser de la Clase Simple&quot;</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p3</span>.<span class="ruby-identifier">class</span>) <span class="ruby-operator">==</span>  <span class="ruby-constant">Simple</span>       
+                <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un campo quest heredado de Pregunta&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p3</span>.<span class="ruby-identifier">quest</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Salida class Xyz \n def pots\n @nice\n end\nend\n&#39;</span>        
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un campo con la respuesta correcta&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p3</span>.<span class="ruby-identifier">right</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;a) nil&#39;</span>           
+                <span class="ruby-keyword">end</span>     
+
+            <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener opciones incorrectas&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p3</span>.<span class="ruby-identifier">distractor</span>) <span class="ruby-operator">==</span> [<span class="ruby-node">&quot;b) #&lt;Xyz:0x00000002bf0ed0&gt; \n&quot;</span>,<span class="ruby-string">&quot;c) 0 \n &quot;</span>, <span class="ruby-string">&quot;d) ninguna de las anteriores \n&quot;</span>]               
+                <span class="ruby-keyword">end</span>     
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un metodo to_s&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p3</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">respond_to</span> :<span class="ruby-identifier">to_s</span>       
+                <span class="ruby-keyword">end</span>     
+
+                <span class="ruby-comment"># Expectativas para comparar</span>
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe poderse comprobar que p1 tiene menos opciones erroneas que p4&quot;</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p1</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@p2</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">true</span>)
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe poderse comprobar que p1 tiene igual opciones erroneas que p4&quot;</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p1</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@p3</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">true</span>)
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe poderse comprobar que p1 tiene mas opciones erroneas que p4&quot;</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p2</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@p3</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">true</span>)
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe poderse comprobar que p1 tiene mas o igual opciones erroneas que p4&quot;</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p2</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@p3</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">true</span>)
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe poderse comprobar que p1 tiene menos o igual opciones erroneas que p4&quot;</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@p2</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-ivar">@p3</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">false</span>)
+                <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>     
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">describe</span> <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">TrueFalse</span> <span class="ruby-keyword">do</span>   
+                <span class="ruby-identifier">before</span> :<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-ivar">@pr2</span>=<span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">TrueFalse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Es apropiado que una clase Tablero herede de una clase Juego \n&quot;</span>, <span class="ruby-string">&quot;Verdadero \n&quot;</span>, <span class="ruby-string">&quot;Falso \n&quot;</span>)
+                <span class="ruby-ivar">@node2</span> = <span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@p2</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>)
+                        <span class="ruby-ivar">@pr3</span>=<span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">TrueFalse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Salida class de hash_raro = {[1, 2, 3] =&gt; Object.new(),Hash.new =&gt; :toto}&quot;</span>, <span class="ruby-string">&quot;Verdadero \n&quot;</span>, <span class="ruby-string">&quot;Falso \n&quot;</span>)
+                    <span class="ruby-ivar">@node3</span> = <span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@p3</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>)
+                <span class="ruby-keyword">end</span>       
+
+                <span class="ruby-identifier">context</span> <span class="ruby-string">&quot;Pruebas para la clase de Verdadero y Falso&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-comment"># Expectativas para la pregunta pr2</span>
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe ser de la clase Simple&quot;</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr2</span>.<span class="ruby-identifier">class</span>) <span class="ruby-operator">==</span>  <span class="ruby-constant">TrueFalse</span>      
+                <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un campo quest heredado de Pregunta&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr2</span>.<span class="ruby-identifier">quest</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Es apropiado que una clase Tablero herede de una clase Juego \n&#39;</span>         
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener una respuesta correcta&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr2</span>.<span class="ruby-identifier">right</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Verdadero \n&#39;</span>            
+                <span class="ruby-keyword">end</span>
+
+            <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener unas opciones incorrectas&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr2</span>.<span class="ruby-identifier">wrong</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Falso \n&#39;</span>        
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un metodo to_s&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr2</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">respond_to</span> :<span class="ruby-identifier">to_s</span>       
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-comment"># Expectativas para la pregunta pr3</span>
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe ser de la clase Simple&quot;</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr3</span>.<span class="ruby-identifier">class</span>) <span class="ruby-operator">==</span>  <span class="ruby-constant">TrueFalse</span>      
+                <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un campo quest heredado de Pregunta&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr3</span>.<span class="ruby-identifier">quest</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Salida class de hash_raro = {[1, 2, 3] =&gt; Object.new(),Hash.new =&gt; :toto}&#39;</span>               
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener una respuesta correcta&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr3</span>.<span class="ruby-identifier">right</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Verdadero \n&#39;</span>            
+                <span class="ruby-keyword">end</span>
+
+            <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener unas opciones incorrectas&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr3</span>.<span class="ruby-identifier">wrong</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Falso \n&#39;</span>        
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un metodo to_s&quot;</span> <span class="ruby-keyword">do</span>
+               <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr3</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">respond_to</span> :<span class="ruby-identifier">to_s</span>       
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-comment"># Expectativa para comparar las preguntas</span>
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Comprueba que la pregunta pr2 tenga las mismas opciones correctas que la pregunta pr3&quot;</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr2</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@pr3</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">true</span>)
+                        <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Comprueba que la pregunta pr2 tenga las mismas opciones correctas que la pregunta pr3&quot;</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr2</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@pr3</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">true</span>)
+                        <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Comprueba que la pregunta pr2 tenga menos o igual opciones correctas que la pregunta pr3&quot;</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr2</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-ivar">@pr3</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">true</span>)
+                        <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Comprueba que la pregunta pr2 tenga menos opciones correctas que la pregunta pr3&quot;</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr2</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@pr3</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">false</span>)
+                        <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Comprueba que la pregunta pr2 tenga mas opciones correctas que la pregunta pr3&quot;</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@pr2</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@pr3</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">false</span>)
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>         
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">describe</span> <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">ListaEnlazada</span> <span class="ruby-keyword">do</span>       
+                <span class="ruby-identifier">before</span> :<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-ivar">@lista</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">ListaEnlazada</span>.<span class="ruby-identifier">new</span>()
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@node1</span>)
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@node2</span>)           
+                <span class="ruby-keyword">end</span>       
+
+                <span class="ruby-identifier">context</span> <span class="ruby-node">&quot; #Expectativas para la clase ListaEnlazada&quot;</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe ser de la clase ListaEnlazada&quot;</span> <span class="ruby-keyword">do</span>
+                 <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">class</span>) <span class="ruby-operator">==</span>  <span class="ruby-constant">ListaEnlazada</span>       
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe existir un Nodo de la lista con sus datos, su siguiente y su anterior&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">cabeza</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">next</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">anterior</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>) 
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe insertar nodos en la lista&quot;</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@node1</span>)
+                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">cabeza</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-ivar">@node1</span>)
+            <span class="ruby-keyword">end</span>
+
+            <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe insertar varios elementos por el principio&quot;</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@node1</span>)
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@node2</span>)
+                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">cabeza</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-ivar">@node2</span>)
+            <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe insertar varios elementos por el final&quot;</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push_final</span>(<span class="ruby-ivar">@node1</span>)
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push_final</span>(<span class="ruby-ivar">@node2</span>)
+                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">cabeza</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-ivar">@node1</span>)
+            <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe extraer el primer elemento de la lista&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@node1</span>)
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@node2</span>)
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">pop</span>
+                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">cabeza</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-ivar">@node1</span>)     
+                <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe extraer el ultimo elemento de la lista&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push_final</span>(<span class="ruby-ivar">@node1</span>)
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push_final</span>(<span class="ruby-ivar">@node2</span>)
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">pop_final</span>
+                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">cabeza</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-ivar">@node1</span>)     
+                <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe insertar por el final de la lista&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push_final</span>(<span class="ruby-ivar">@node1</span>)
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push_final</span>(<span class="ruby-ivar">@node2</span>)
+                <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">cabeza</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-ivar">@node1</span>)     
+                <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe poderse hacer un each&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span> <span class="ruby-identifier">i</span>}
+                        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">describe</span> <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Examen</span> <span class="ruby-keyword">do</span>          
+                <span class="ruby-identifier">before</span> :<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span>  
+                <span class="ruby-ivar">@p1</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Simple</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Cual es el tipo del objeto en el siguiente codigo Ruby? class Objeto \n end&quot;</span>, <span class="ruby-string">&quot;Un Objeto&quot;</span>, [<span class="ruby-string">&quot;Una instancia de la clase Class \n &quot;</span>, <span class="ruby-string">&quot;Una constante \n&quot;</span>, <span class="ruby-string">&quot;Ninguna de las anteriores \n&quot;</span>])
+                <span class="ruby-ivar">@p2</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">TrueFalse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Es apropiado que una clase Tablero herede de una clase Juego\n&quot;</span>, <span class="ruby-string">&quot;Verdadero&quot;</span>, [<span class="ruby-string">&quot;Falso \n&quot;</span>])
+                <span class="ruby-ivar">@p3</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">TrueFalse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Salida class de hash_raro = {[1, 2, 3] =&gt; Object.new(),Hash.new =&gt; :toto}\n&quot;</span>, <span class="ruby-string">&quot;Verdadero&quot;</span>, [<span class="ruby-string">&quot;Falso \n&quot;</span>])
+                <span class="ruby-ivar">@p4</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Simple</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;class Array \n\tdef say_hi \n\t\tHEY!\n\tend\nend\np[1,, bob].say_hi \n&quot;</span>, <span class="ruby-string">&quot;Ninguna de las anteriores&quot;</span>, [<span class="ruby-string">&quot;1\n&quot;</span>, <span class="ruby-string">&quot;bob\n&quot;</span>, <span class="ruby-string">&quot;HEY!\n&quot;</span>])
+                <span class="ruby-ivar">@p5</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Simple</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Salida de:\n\tclass Xyz \n\t\tdef pots \n\t\t\t@nice \n\t\tend \n\tend\n&quot;</span>,<span class="ruby-string">&quot;nil&quot;</span>, [<span class="ruby-node">&quot;#&lt;Xyz:0x00000002bf0ed0&gt; \n&quot;</span>,<span class="ruby-string">&quot;0 \n &quot;</span>, <span class="ruby-string">&quot;Ninguna de las anteriores \n&quot;</span> ])
+
+                <span class="ruby-ivar">@lista</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">ListaEnlazada</span>.<span class="ruby-identifier">new</span>()
+
+                <span class="ruby-ivar">@nodo1</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@p1</span>,<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>)
+                <span class="ruby-ivar">@nodo2</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@p2</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>)
+                <span class="ruby-ivar">@nodo3</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@p3</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>)
+                <span class="ruby-ivar">@nodo4</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@p4</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>)
+                <span class="ruby-ivar">@nodo5</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@p5</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>)
+
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@nodo1</span>)
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@nodo2</span>)
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@nodo3</span>)
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@nodo4</span>)
+                <span class="ruby-ivar">@lista</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@nodo5</span>)
+
+                <span class="ruby-ivar">@examen1</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Examen</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@lista</span>)  
+
+                <span class="ruby-ivar">@ok1</span> = <span class="ruby-string">&quot;nil&quot;</span>
+                <span class="ruby-ivar">@ok2</span> = <span class="ruby-string">&quot;Ninguna de las anteriores&quot;</span>
+                <span class="ruby-ivar">@ok3</span> = <span class="ruby-string">&quot;Verdadero&quot;</span>
+                <span class="ruby-ivar">@ok4</span> = <span class="ruby-string">&quot;Verdadero&quot;</span>
+                <span class="ruby-ivar">@ok5</span> = <span class="ruby-string">&quot;Un Objeto&quot;</span>
+
+                <span class="ruby-identifier">respuestas_correctas</span> = [<span class="ruby-ivar">@ok1</span>,<span class="ruby-ivar">@ok2</span>,<span class="ruby-ivar">@ok3</span>,<span class="ruby-ivar">@ok4</span>,<span class="ruby-ivar">@ok5</span>]
+
+                <span class="ruby-ivar">@interfaz1</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Interfaz</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">respuestas_correctas</span>) 
+                <span class="ruby-keyword">end</span>       
+
+                <span class="ruby-identifier">context</span> <span class="ruby-node">&quot; #Expectativas para Examen y Interfaz&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-comment"># Expectativas para @examen1</span>
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe ser de la clase Examen&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@examen1</span>.<span class="ruby-identifier">class</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-constant">Examen</span>)
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe poderse mostrar una  lista de preguntas&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@examen1</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">respond_to</span> :<span class="ruby-identifier">to_s</span>
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener una lista de preguntas&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@examen1</span>.<span class="ruby-identifier">lista</span>.<span class="ruby-identifier">class</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-constant">ListaEnlazada</span>)
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-comment"># Expectativas para @interfaz1</span>
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe ser de la clase Interfaz&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@interfaz1</span>.<span class="ruby-identifier">class</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-constant">Interfaz</span>)
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un array de preguntas&quot;</span> <span class="ruby-keyword">do</span> 
+                        <span class="ruby-identifier">respuestas_usuario</span> = [<span class="ruby-ivar">@ok1</span>,<span class="ruby-ivar">@ok2</span>,<span class="ruby-ivar">@ok3</span>,<span class="ruby-ivar">@ok4</span>,<span class="ruby-ivar">@ok5</span>]
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@interfaz1</span>.<span class="ruby-identifier">realizarTest</span>(<span class="ruby-identifier">respuestas_usuario</span>)).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">true</span>)
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@interfaz1</span>.<span class="ruby-identifier">cont_ok</span>.<span class="ruby-identifier">is_a?</span><span class="ruby-constant">Integer</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span> (<span class="ruby-keyword">true</span>)
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@interfaz1</span>.<span class="ruby-identifier">cont_nok</span>.<span class="ruby-identifier">is_a?</span><span class="ruby-constant">Integer</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span> (<span class="ruby-keyword">true</span>)
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un array de preguntas. Todas mal&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">respuestas_usuario</span> = [<span class="ruby-string">&quot;1&quot;</span>,<span class="ruby-string">&quot;2&quot;</span>,<span class="ruby-string">&quot;3&quot;</span>,<span class="ruby-string">&quot;4&quot;</span>,<span class="ruby-string">&quot;5&quot;</span>]
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@interfaz1</span>.<span class="ruby-identifier">realizarTest</span>(<span class="ruby-identifier">respuestas_usuario</span>)).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">false</span>)
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe tener un array de preguntas. Todas bien&quot;</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">respuestas_usuario</span> = [<span class="ruby-ivar">@ok1</span>,<span class="ruby-ivar">@ok2</span>,<span class="ruby-ivar">@ok3</span>,<span class="ruby-ivar">@ok4</span>,<span class="ruby-ivar">@ok5</span>]
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@interfaz1</span>.<span class="ruby-identifier">realizarTest</span>(<span class="ruby-identifier">respuestas_usuario</span>)). <span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-keyword">true</span>)
+                <span class="ruby-keyword">end</span> 
+
+                        <span class="ruby-identifier">it</span> <span class="ruby-node">&quot; #Debe poderse inventir la lista&quot;</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-ivar">@lista2</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">ListaEnlazada</span>.<span class="ruby-identifier">new</span>()
+                        <span class="ruby-ivar">@lista2</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@nodo1</span>)
+                        <span class="ruby-ivar">@lista2</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@nodo4</span>)
+
+                                <span class="ruby-ivar">@examen1_invertido</span> = <span class="ruby-constant">Test</span><span class="ruby-operator">::</span><span class="ruby-constant">Examen</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@lista2</span>) 
+
+                        <span class="ruby-identifier">expect</span>(<span class="ruby-ivar">@examen1_invertido</span>.<span class="ruby-identifier">invertir</span>(<span class="ruby-ivar">@lista2</span>).<span class="ruby-identifier">top</span>.<span class="ruby-identifier">value</span>).<span class="ruby-identifier">to</span> <span class="ruby-identifier">eq</span>(<span class="ruby-ivar">@nodo1</span>.<span class="ruby-identifier">value</span>)
+                        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>end</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

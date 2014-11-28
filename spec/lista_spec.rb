@@ -328,12 +328,12 @@
 		
 			it " #Debe poderse inventir la lista" do
 				@lista2 = Test::ListaEnlazada.new()
-		    		@lista2.push(@nodo1)
-		    		@lista2.push(@nodo4)
+		    	@lista2.push(@nodo1)
+		    	@lista2.push(@nodo4)
    
 				@examen1_invertido = Test::Examen.new(@lista2) 
 
-		    		expect(@examen1_invertido.invertir(@lista2).top.value).to eq(@nodo1.value)
+		    	expect(@examen1_invertido.invertir(@lista2).top.value).to eq(@nodo1.value)
 			end
 
 
