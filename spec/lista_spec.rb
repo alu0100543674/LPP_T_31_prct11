@@ -294,9 +294,6 @@
 	        	it " #Debe ser de la clase Examen" do
 		    		expect(@examen1.class).to eq(Examen)
 	        	end
-		
-	
-
 
 			it " #Debe poderse mostrar una  lista de preguntas" do
 		    		expect(@examen1).to respond_to :to_s
@@ -306,7 +303,38 @@
 			it " #Debe tener una lista de preguntas" do
 		    		expect(@examen1.lista.class).to eq(ListaEnlazada)
 	        	end
+			
+			# Expectativas para @interfaz1
+	        	it " #Debe ser de la clase Interfaz" do
+		    		expect(@interfaz1.class).to eq(Interfaz)
+	        	end
+	        
+			it " #Debe tener un array de preguntas" do 
+				respuestas_usuario = [@ok1,@ok2,@ok3,@ok4,@ok5]
+				expect(@interfaz1.realizarTest(respuestas_usuario)).to eq(true)
+				expect(@interfaz1.cont_ok.is_a?Integer).to eq (true)
+				expect(@interfaz1.cont_nok.is_a?Integer).to eq (true)
+	        	end
+	        
+			it " #Debe tener un array de preguntas. Todas mal" do
+		    		respuestas_usuario = ["1","2","3","4","5"]
+                		expect(@interfaz1.realizarTest(respuestas_usuario)).to eq(false)
+			end
+		
+			it " #Debe tener un array de preguntas. Todas bien" do
+		    		respuestas_usuario = [@ok1,@ok2,@ok3,@ok4,@ok5]
+		    		expect(@interfaz1.realizarTest(respuestas_usuario)). to eq(true)
+			end 
+		
+			it " #Debe poderse inventir la lista" do
+				@lista2 = Test::ListaEnlazada.new()
+		    		@lista2.push(@nodo1)
+		    		@lista2.push(@nodo4)
+   
+				@examen1_invertido = Test::Examen.new(@lista2) 
 
+		    		expect(@examen1_invertido.invertir(@lista2).top.value).to eq(@nodo1.value)
+			end
 
 
 		end
