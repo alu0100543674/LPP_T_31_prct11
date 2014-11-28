@@ -254,7 +254,7 @@
 	    	end
 	    end
 
-describe Test::Examen do	  
+		describe Test::Examen do	  
 		  	before :each do  
 		      	@p1 = Test::Simple.new("Cual es el tipo del objeto en el siguiente codigo Ruby? class Objeto \n end", "Un Objeto", ["Una instancia de la clase Class \n ", "Una constante \n", "Ninguna de las anteriores \n"])
 		        @p2 = Test::TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego\n", "Verdadero", ["Falso \n"])
@@ -294,8 +294,6 @@ describe Test::Examen do
 	        	it " #Debe ser de la clase Examen" do
 		    		expect(@examen1.class).to eq(Examen)
 	        	end
-			end
 		end
-end
-
+	end
 end

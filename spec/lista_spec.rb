@@ -296,4 +296,10 @@
 	        	end
 		end
 	end
+
+
+			it " #Debe poderse mostrar una  lista de preguntas" do
+		    		expect(@examen1).to respond_to :to_s
+	        	end
+
 end
