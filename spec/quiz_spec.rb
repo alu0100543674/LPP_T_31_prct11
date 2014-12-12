@@ -17,4 +17,21 @@ module DSL
 			}
   		end
 	end
+
+	context " #Expectativas para la clase QuizZ" do
+      		it " #Debe pertenercer @q a la clase QuizZ" do
+				expect(@q.class).to eq(QuizZ)
+    			end
+       
+       		it " #Debe tener un metodo to_s" do
+				expect(@q.class).to respond_to :to_s
+      		end
+      		
+      		it " #Debe tener un metodo to_s" do
+				expect(@q.name).to eq("Cuestionario de LPP 05/12/2014")
+      		end
+      end
+
+
+
 end
