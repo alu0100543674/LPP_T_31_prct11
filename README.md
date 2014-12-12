@@ -1,4 +1,4 @@
-PRACTICA 10
+PRACTICA 11
 
 Grupo: LPP_T_31
 
@@ -8,13 +8,8 @@ Equipo:
 
 Descripción:
 
-	1. Diseñar e implementar un metodo, siguiendo la filosofia de la programacion funcional, que permita invertir el orden de las preguntas de un examen.
-	2. Documentar la gema utilizando una herramienta de generacion automatica de documentacion (RDOC o YARD).
-	3. Repartir las tareas entre los miembros del Equipo de Trabajo.
-
-Jerarquia de Clases:
-	1. Representar preguntas de Seleccion Simple y Verdadero y Falso.
-	2. Representar y gestionar Listas Enlazadas.
-	3. Representar un Examen.
-	4. Representar una Interfaz de Usuario.
+	1. Diseñar e implementar un Lenguaje de Dominio Especifico (DSL) siguiendo la filosofia de Ruby que permita la definicion de un examen.
+	2. Crear una cuenta en rubygems.org. El 'handle' que se solicita es el nombre de usuario.
+	3. Puesto que ya se ha terminado de escribir codigo, se esta listo para construir y publicar la gema.
+	4. Repartir las tareas entre los miembros del Equipo de Trabajo.
 
