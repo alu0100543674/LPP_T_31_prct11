@@ -16,7 +16,7 @@ module DSL
 	  			# right => 'Falso'
 			}
   		end
-	end
+	
 
 	context " #Expectativas para la clase QuizZ" do
       		it " #Debe pertenercer @q a la clase QuizZ" do
