@@ -11,9 +11,9 @@ module DSL
 	    			wrong => 'muchos',
 	  			wrong => 'los que defina el usuario'
 	  				
-	  			# question "En Ruby los bloques son objetos que contienen codigo",
-	  			# wrong => 'Cierto',
-	  			# right => 'Falso'
+	  			question "En Ruby los bloques son objetos que contienen codigo",
+	  			wrong => 'Cierto',
+	  			right => 'Falso'
 			}
   		end
 	
@@ -30,6 +30,16 @@ module DSL
       		it " #Debe tener un metodo to_s" do
 				expect(@q.name).to eq("Cuestionario de LPP 05/12/2014")
       		end
+ 
+    
+    		it " #Debe tener un metodo q" do
+				expect(@q).to respond_to :q
+      		end
+      		
+      		it " #Debe tener un metodo wrong" do
+				expect(@q).to respond_to :wrong
+      		end
+      		
       end
 
     end
